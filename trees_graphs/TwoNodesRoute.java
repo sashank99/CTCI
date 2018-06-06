@@ -4,7 +4,7 @@ import java.util.Queue;
 import java.util.LinkedList;
 
 /**
- * Given a directed graph, design a n algorithm to find out whether there is a
+ * Given a directed graph, design an algorithm to find out whether there is a
  * route between two nodes.
  */
 public class TwoNodesRoute {

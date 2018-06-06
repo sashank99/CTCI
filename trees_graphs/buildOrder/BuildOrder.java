@@ -48,16 +48,17 @@ public class BuildOrder{
 	}
 	
 	public static void main(String[] args) {
-		String[] projects = {"a", "b", "c", "d", "e", "f"};
+		/*String[] projects = {"a", "b", "c", "d", "e", "f"};
 		String[][] dependencies = {
 				{"a","d"},
 				{"f","b"},
 				{"b","d"},
 				{"f","a"},
-				{"d","c"}
-		};
-		//String[] projects = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j"};
-		/*String[][] dependencies = {
+				{"d","c"},
+				{"d","a"}
+		};*/
+		String[] projects = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j"};
+		String[][] dependencies = {
 				{"a", "b"},
 				{"b", "c"},
 				{"a", "c"},
@@ -69,7 +70,8 @@ public class BuildOrder{
 				{"h", "i"},
 				{"h", "j"},
 				{"i", "j"},
-				{"g", "j"}};*/
+				{"g", "j"},
+				{"f","d"}};
 		String[] buildOrder = build(projects, dependencies);
 		if (buildOrder == null) {
 			System.out.println("Circular Dependency.");
